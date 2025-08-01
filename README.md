@@ -3,8 +3,7 @@
 Create the restaurant website use Javascript for content section
 
 
-# Website reference:
-##  Link: [text](https://winsfolio.net/html/foodio/index.html)
+# Website reference: [Foodio](https://winsfolio.net/html/foodio/index.html)
 
 ## Hero section
 ![alt text](image.png)
