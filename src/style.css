@@ -1,0 +1,454 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root{
+    --font: 'Poppins', 'monospace', 'sans-serif';
+    --primarycolor: hsl(0, 0%, 100%);
+    --primarycolor-100: #F5F8FD;
+    --primarycolor-200: hsl(0, 0%, 90%);
+    --primarycolor-300: hsl(0, 0%, 90%);
+    --secondarycolor: hsl(0, 0%, 0%);
+    --secondarycolor-100: hsl(0, 0%, 30%);
+    --accent_orange-100: hsl(25, 91%, 79%);
+    --accent_orange-200: hsl(25, 91%, 59%);
+    --accent_orange-300: hsl(25, 91%, 39%);
+    --accent_skin: hsl(45, 63%, 78%);
+    --h1: 600 3rem/1.2em var(--font);
+    --h2: 600 2rem/1.2em var(--font);
+    --h3: 600 1.5rem/1.2em var(--font);
+    --large: 1.25rem/1.5em var(--font);
+    --p: 1rem/1.5em var(--font);
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-wrap: balance;
+    font-family: var(--font);
+    background-color: var(--primarycolor);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h2);
+}
+
+h3 {
+    font: var(--h3);
+}
+
+p{
+    font: var(--p);
+}
+
+a{
+    color: var(--secondarycolor);
+    display: inline-block;
+}
+
+.btn {
+    width: 202px;
+    padding: 21px 0;
+    background-color: var(--accent_skin);
+    position: relative;
+    font-size: var(--p);
+    font-weight: 600;
+    border-radius: 12px;
+    color: var(--secondarycolor);
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* button component */
+
+.btn::before{
+    content: '';
+    position: absolute;
+    width: calc(100% - 10px);
+    height: 67px;
+    background-color: transparent;
+    border: 3px solid var(--accent_skin);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    border-radius: 12px;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    transform: translate(128px, -50%);
+    width: 63px;
+    transition: ease-in 160ms;
+}
+
+#content {
+    width: 100%;
+    background-color: var(--primarycolor);
+    min-height: 100vh;
+}
+
+.row {
+    max-width: 1200px;
+    min-width: 1200px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/*HEADER SECTION */
+
+.top__navigation{
+    background-color: var(--accent_orange-200);
+    padding: 10px;
+    font-weight: 600;
+    text-align: left;
+
+}
+.Header__top{
+    justify-content: space-between;
+    height: 40px;
+    margin: 0 auto;
+
+}
+.contact--number{
+    list-style: none;
+    column-gap: 48px;
+}
+
+.contact--number li span {
+    margin-left: 8px;
+}
+
+.contact--info{
+    list-style: none;
+    column-gap: 80px;
+}
+
+.contact--info li ul{
+    list-style: none;
+    gap: 0 32px;
+}
+
+.bottom__navigation{
+    background-color: var(--primarycolor);
+}
+
+.Header__bottom{
+    justify-content: space-between;
+    margin: 0 auto;
+    list-style: none;
+    padding: calc(113px / 2) 0;
+}
+
+.list ul {
+        list-style: none;
+        gap: 0 32px;
+        a{
+            text-decoration: none;
+        }
+    }
+
+.add__to__card{
+    gap: 0 20px;
+}
+
+
+#hero{
+    height: 710px;
+    background-image: linear-gradient(153deg,rgba(0, 0, 0, 1) 0%, rgba(166, 166, 166, 0) 70%), url(./img_src/Hero\ section.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center 45%;
+    justify-content: center;
+    background-repeat: no-repeat;
+    padding: 0 100px;
+    
+}
+
+#Herosection{
+    flex-direction: column;
+    align-items: baseline;
+    gap: 50px 0;
+    
+}
+.heading{
+    width: 468px;
+    flex-direction: column;
+    row-gap: 16px;
+    color: var(--primarycolor);
+}
+
+.heading h1 span {
+    font-weight: 700;
+    color: var(--accent_orange-200);
+}
+.interactive{
+       gap: 36px;     
+}
+
+.interactive .watch{
+    gap: 8px;
+    color: var(--primarycolor);
+    :hover{
+        cursor: pointer;
+    }
+}
+
+.interactive .watch span {
+    display: inline-block;
+    :first-child{
+        width: calc(67px / 2);
+        height: calc(67px /2);
+        border: 4px solid var(--primarycolor);
+        border-radius: 50px;
+        padding: 29px;
+        margin-right: 8px;
+        display: flex;
+        font-size: 1.4rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.food_menu {
+    padding: 120px;
+    justify-content: center;
+}
+
+.food_menu .food__list {
+    list-style: none;
+    justify-content: space-between;
+}
+
+.food_menu .food__list li{
+    color: var(--primarycolor);
+    position: relative;
+    height: 284px;
+    max-width: 587px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 12px;
+    padding: 68px 34px;
+}
+
+.food__list li:nth-child(1){
+    background-image: linear-gradient(88deg,rgba(0, 0, 0, 1) 4%, rgba(166, 166, 166, 0) 80%), url("./img_src/Steak.webp");
+}
+
+.food__list li:nth-child(2){
+    background-image: linear-gradient(88deg,rgba(0, 0, 0, 1) 4%, rgba(166, 166, 166, 0) 80%), url("./img_src/Pizza\ and\ dessert.webp");
+}
+
+.food__list p {
+    width: 260px;
+}
+
+.food__list li .food__price {
+    width: 116px;
+    height: 116px;
+    background-color: var(--accent_orange-200);
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 100px;
+    position: absolute;
+    left: 34px;
+    top: 190px;
+    color: var(--secondarycolor);
+}
+
+
+.food__price span {
+    font-size: 24px;
+    color: var(--accent_skin);
+}
+
+footer {
+    background-color: var(--primarycolor-200);
+    padding: 20px 0;
+    border-top: 8px solid var(--accent_orange-200);
+
+}
+
+footer > *, footer div p {
+    font-weight: 500;
+}
+
+footer div {
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+footer div p span {
+    font-weight: 600;
+    color: var(--accent_orange-200)
+}
+
+footer div ul {
+    list-style: none;
+    gap:32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Menu section */
+
+.invert {
+    background-color: var(--primarycolor);
+}
+
+.primary {
+    justify-content: end;
+}
+.reverse {
+    justify-content: start;
+    ul img {
+        bottom: 50%;
+        left: 100%;
+        transform: translate(-50%, 50%);
+    }
+}
+
+.menu{
+    background-color: var(--primarycolor-100);
+    justify-content: center;
+    padding: 84px 0;
+}
+
+.menu h2 {
+    font-size: var(--h1);
+}
+
+.menu_content{
+    margin: 0 auto;
+}
+
+.menu_content-list{
+    background-color: var(--accent_orange-200);
+    padding: 56px 140px 32px;
+    position: relative;
+    width: 78.34%;
+    border-radius: 24px;
+}
+
+.menu_content-list ul {
+    list-style: none;
+    flex-direction: column;
+    width: 498px;
+    align-items: flex-end;
+}
+
+.menu_content img {
+    position: absolute;
+    width: 520px;
+    height: 489px;
+    right: 100%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+
+}
+
+.menu_content-list .list_title{
+    font: var(--h2);
+    width: 100%;
+}
+
+.menu_content-list ul .dish_info{
+    flex-wrap: wrap;
+    column-gap: 140px;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 2px dashed var(--secondarycolor);
+    .dish_name {
+        font: var(--large);
+        font-weight: 600;
+    }
+    .dish_price {
+        color: var(--primarycolor-200);
+        font: var(--large);
+        font-weight: 800;
+    }
+    .dish_desc {
+        font: var(--p);
+    }
+
+    &:last-child {
+        border: none;
+    }   
+}
+
+/* Contact section */
+.contact__section{
+background-color: var(--primarycolor);
+justify-content: center;
+border-top: 2px solid var(--primarycolor-300);
+padding: 84px;
+}
+
+.contact__section .contact__menu{
+    justify-content: center;
+    flex-direction: column;
+    gap: 132px;
+    h2{
+        font-size: 2rem;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 140%;
+            height: 16px;
+            background-color: var(--accent_skin);
+            border-radius: 50px;
+            right: 50%;
+            transform: translateX(50%);
+            top: 100%;
+        }
+    }
+}
+
+.contact__section .contact__menu .contact__info{
+    gap: 24px;
+}
+
+.contact__info .contact__phone, .contact__info .contact__profile{
+    width: 400px;
+    font-size: 200px;
+    text-align: center;
+    border: 8px solid var(--accent_orange-200);
+    border-radius: 20px;
+    p {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    a{
+        transition: font-size linear 0.1s;
+        &:hover{
+            font-size: 180px;
+            color: var(--accent_orange-200);
+        }
+    }
+}
+
